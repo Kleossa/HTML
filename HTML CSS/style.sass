@@ -1,0 +1,845 @@
+$color-site: #f16d7f
+
+*
+  margin: 0
+  padding: 0
+
+body 
+  font-family: 'Lato', sans-serif
+
+.center
+  padding: 0 calc(50% - 570px)
+
+a 
+  text-decoration: none
+
+.header 
+  height: 100px
+  background-color: #ffffff
+  border: 1px solid #ececec
+  box-shadow: 0 0 10px 0 #ececec
+  display: flex
+  justify-content: space-between
+  align-items: center
+  &__left,
+  &__right,
+  &__form
+    display: flex
+    align-items: center
+  &__cart
+    margin-right: 26px
+
+.button 
+  font-size: 15px
+  color: #ffffff
+  text-align: right
+  letter-spacing: 0.03em
+  background-color: $color-site
+  padding: 12px 16px
+  border: 1px solid $color-site
+  border-radius: 3px
+  transition: transform 0.3s
+  &:hover
+    border: 1px solid $color-site
+    background-color: #fff
+    color: $color-site
+    transform: scale(1.03)
+
+.logo 
+  display: flex
+  align-items: center
+  margin-right: 37px
+  font-size: 27px
+  font-weight: 300
+  color: rgba(34, 34, 34, 1)
+  text-align: center
+  letter-spacing: 0.03em
+  line-height: 32px
+  text-transform: uppercase
+  &__img
+   margin-right: 13px
+
+.last__character
+  font-weight: 900
+  color: rgba(241, 109, 127, 1)
+
+.browse 
+  text-align: center
+  line-height: 38px
+  height: 38px
+  width: 87px
+  border: 1px solid #e6e6e6
+  border-radius: 3px 0 0 3px
+  background-image: -webkit-linear-gradient(180deg, #f9f9f9 0%, #f5f5f5 100%)
+  background-image: -moz-linear-gradient(180deg, #f9f9f9 0%, #f5f5f5 100%)
+  background-image: -o-linear-gradient(180deg, #f9f9f9 0%, #f5f5f5 100%)
+  background-image: linear-gradient(180deg, #f9f9f9 0%, #f5f5f5 100%)
+
+.browse:hover
+  color: rgba(241, 109, 127, 1)
+
+.search_field 
+  height: 38px
+  width: 250px
+  background-color: #ffffff
+  border: 1px solid #e6e6e6
+  border-radius: 0 3px 3px 0
+  padding-left: 16px
+  padding-right: 51px
+  &::-webkit-input-placeholder
+    color: #a4a4a4
+    opacity: 1
+    font-size: 14px
+    font-weight: 300
+    text-align: left
+    letter-spacing: 0.03em
+    line-height: 32px
+
+.input
+  outline: none
+
+.details
+  outline: none
+
+.input_search 
+  position: relative
+
+.header_button 
+  position: absolute
+  right: 0
+  background-color: #ffffff
+  border: 1px solid #e6e6e6
+  border-radius: 0 3px 3px 0
+  padding: 10.5px
+
+.browse 
+  position: relative
+  &[open] .drop
+    display: flex
+    background-color: #ffffff
+    top: 20px
+    z-index: 1
+    text-align: left
+    flex-flow: column
+
+summary::-webkit-details-marker 
+  display: none
+
+.drop__cart 
+  width: 262px
+  padding: 16px
+  &__li
+    display: flex
+    flex-wrap: wrap
+    align-items: center
+    justify-content: space-between
+
+.card__text 
+  width: 112px
+  margin-left: 14px
+  margin-right: 14px
+  text-align: left
+  &__stars
+    margin-top: 10px
+    margin-bottom: 12px
+  &__h
+    font-size: 12px
+    font-weight: bold
+    color: #222222
+    text-align: left
+    text-transform: uppercase
+  &__prise
+    font-size: 12px
+    color: $color-site
+    text-transform: uppercase
+
+.card__text__h:hover
+  color: $color-site
+
+.card__image
+  transition: 0.3s
+
+.card__image:hover
+  transform: scale(1.03)
+
+.fa-times-circle
+  color: #646464
+
+.fa-times-circle:hover
+  color: $color-site
+
+.calc_x 
+  font-size: 10px
+  color: $color-site
+
+.drop__price 
+  display: flex
+  justify-content: space-between
+
+.total__price 
+  font-size: 16px
+  font-weight: bold
+  color: #222222
+  text-transform: uppercase
+
+.cart__checkout,
+.cart__go 
+  border: 1px solid #e6e6e6
+  font-size: 14px
+  font-weight: bold
+  color: #4a4a4a
+  text-transform: uppercase
+  display: flex
+  height: 50px
+  width: 100%
+  margin-bottom: 11px
+  justify-content: center
+  align-items: center
+  transition: transform 0.3s
+
+.cart__checkout:hover,
+.cart__go:hover
+  border: 1px solid $color-site
+  color: $color-site
+  transform: scale(1.03)
+
+.cart__button 
+  margin-top: 32px
+
+.cart__open 
+  position: relative
+  &:hover .drop
+    display: flex
+    background-color: #ffffff
+    top: 20px
+    z-index: 1
+    text-align: left
+    flex-flow: column
+
+.menu 
+  list-style-type: none
+  display: flex
+  justify-content: center
+  &__link
+    padding: 20px
+    display: block
+    font-size: 14px
+    font-weight: 900
+    color: #222222
+    line-height: 26px
+    text-transform: uppercase
+    &__active
+      border-bottom: 3px solid #ef5b70
+  &__list
+    position: relative
+    &:hover .drop
+      display: flex
+
+.menu__link:hover
+  color: rgba(241, 109, 127, 1)
+
+.drop 
+  position: absolute
+  background-color: #ffffff
+  border-radius: 5px
+  padding: 20px
+  display: none
+  top: 48px
+  &_last
+    right: 0
+  &__col
+    margin-right: 46px
+    &:last-of-type
+      margin-right: 0
+  &__h3
+    font-size: 14px
+    color: #232323
+    letter-spacing: 0.03em
+    line-height: 32px
+    text-transform: uppercase
+    border-bottom: 1px solid #e8e8e8
+    margin-bottom: 8px
+    width: 234px
+  &__ul
+    list-style: none
+  &__a
+    font-size: 14px
+    color: #646464
+    text-align: right
+    letter-spacing: 0.03em
+    line-height: 28px
+    &:hover
+      color: $color-site
+  &__img
+    position: relative
+    display: block
+    margin-top: 30px
+
+.super_sale_content 
+  position: absolute
+  top: 61px
+  left: 174px
+  font-size: 22px
+  font-weight: 900
+  color: #ffffff
+  letter-spacing: 0.03em
+  line-height: 28px
+  text-transform: uppercase
+  width: 71px
+
+.clr 
+  clear: both
+
+.bc 
+  height: 148px
+  display: flex
+  background-color: #f8f3f4
+  justify-content: space-between
+  align-items: center
+  &__h3
+    display: block
+    font-size: 24px
+    font-weight: 900
+    color: $color-site
+    text-align: center
+    line-height: 20px
+    text-transform: uppercase
+  &__link
+    font-size: 14px
+    font-weight: normal
+    color: #636363
+    text-align: center
+    line-height: 20px
+    text-transform: uppercase
+    &:not(:last-child):after
+      content: " / "
+    &:hover
+      color: $color-site
+    &_active
+      color: $color-site
+      font-weight: bold
+
+.promo 
+  height: 614px
+  background-color: #e8e8e8
+  background-image: url(img/promo-back.png)
+  background-position: center -51px
+  background-repeat: no-repeat
+  &__content
+    margin-top: 224px
+    float: left
+    border-left: 12px solid $color-site
+    padding-left: 12px
+    &__h1
+      font-size: 60px
+      font-weight: 900
+      color: #222222
+      letter-spacing: 0.03em
+      line-height: 45px
+      margin-bottom: 12px
+    &__h2
+      font-size: 40px
+      font-weight: 900
+      color: #222222
+      letter-spacing: 0.03em
+      line-height: 33px
+
+.promoLast__word 
+  color: $color-site
+
+.offer 
+  display: flex
+  justify-content: space-between
+  padding-top: 98px
+  padding-bottom: 100px
+  &__box
+    width: 560px
+    &__item
+      height: 261px
+      margin-bottom: 20px
+    &__item_big
+      height: 542px
+
+.men__top 
+  margin-bottom: 20px
+
+.men 
+  display: block
+  height: 539px
+  background-repeat: no-repeat
+  width: 560px
+  position: relative
+  text-align: left
+
+.men_title
+  height: 82px
+  width: 175px
+  background-color: #ffffff
+  position: absolute
+  top: 26px
+  padding-top: 16px
+  padding-left: 19px
+
+.accesories 
+  display: block
+  background-repeat: no-repeat
+  height: 261px
+  width: 560px
+  position: relative
+  text-align: left
+
+.accesories_title
+  height: 82px
+  width: 225px
+  background-color: #ffffff
+  position: absolute
+  top: 25px
+  padding-top: 16px
+  padding-left: 19px
+
+.women__top 
+  margin-bottom: 20px
+
+.women 
+  display: block
+  background-repeat: no-repeat
+  height: 261px
+  width: 560px
+  position: relative
+  text-align: left
+
+.women_title 
+  height: 82px
+  width: 162px
+  background-color: #ffffff
+  position: absolute
+  top: 26px
+  padding-top: 16px
+  padding-left: 18px
+
+.kids 
+  display: block
+  background-repeat: no-repeat
+  height: 539px
+  width: 560px
+  position: relative
+  text-align: left
+
+.kids_title 
+  height: 82px
+  width: 180px
+  background-color: #ffffff
+  position: absolute
+  top: 27px
+  padding-top: 16px
+  padding-left: 19px
+
+.trend_black 
+  display: inline-block
+  font-size: 18px
+  font-weight: 900
+  color: #222222
+  letter-spacing: 0.03em
+  text-transform: uppercase
+
+.trend_pink 
+  display: inline-block
+  font-size: 30px
+  font-weight: 900
+  color: $color-site
+  letter-spacing: 0.03em
+  text-transform: uppercase
+
+.items__h1
+  font-size: 30px
+  font-weight: bold
+  color: #222222
+  text-align: center
+  letter-spacing: 0.03em
+  margin-bottom: 14px
+
+.items__h2 
+  font-size: 14px
+  color: #9f9f9f
+  text-align: center
+  letter-spacing: 0.03em
+
+.product 
+  width: 263px
+  margin-bottom: 39px
+  position: relative
+
+.product
+  transition: transform 0.3s
+
+.product-box
+  display: flex
+  flex-wrap: wrap
+  justify-content: space-between
+  margin-top: 60px
+
+.product:hover 
+  box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.16)
+
+.product:hover
+  transform: scale(1.03)
+
+.product:hover .product__img
+  filter: brightness(40%)
+
+.product:hover .product__add 
+  display: flex
+
+.product__content 
+  padding: 16px
+
+.product__img 
+  width: 100%
+
+.product__name 
+  font-size: 13px
+  color: #222222
+  text-transform: uppercase
+
+.product__price 
+  font-size: 16px
+  font-weight: bold
+  color: $color-site
+  text-transform: uppercase
+  margin-top: 16px
+
+.product__add 
+  font-size: 13px
+  font-weight: bold
+  color: #ffffff
+  height: 39px
+  width: 123px
+  border: 1px solid #ffffff
+  display: none
+  align-items: center
+  justify-content: center
+  position: absolute
+  top: 97px
+  left: 70px
+  transition: 0.3s
+
+.product__add:hover 
+  box-shadow: 0 0 6px #fff
+  transform: scale(1.03)
+
+.product_center 
+  display: flex
+  justify-content: center
+
+.option 
+  display: flex
+  justify-content: space-between
+  padding-top: 113px
+  padding-bottom: 97px
+  width: 1140px
+
+.option__center 
+  height: 529px
+  width: 767px
+  background-image: url(img/1314.png)
+  background-repeat: no-repeat
+
+.article_option 
+  width: 373px
+
+.option__h1 
+  margin-top: 146px
+  margin-left: 39px
+  text-align: left
+
+.option_black1,
+.option_pink 
+  font-size: 54px
+  font-weight: bold
+  letter-spacing: 0.03em
+  text-align: left
+
+.option_black1 
+  color: #ffffff
+
+.option_pink 
+  color: $color-site
+
+.option_black2 
+  font-size: 32px
+  font-weight: bold
+  color: #ffffff
+  letter-spacing: 0.03em
+  -webkit-transform: scale(0.89)
+  -ms-transform: scale(0.89)
+  transform: scale(0.89)
+  text-align: left
+
+.article_option 
+  background-color: #222224
+  height: 529px
+  display: flex
+  justify-content: center
+  align-items: center
+  flex-wrap: wrap
+
+.option__right 
+  display: flex
+  width: 294px
+
+.option__image 
+  width: 78px
+  transition: transform 0.3s
+
+.option__image:hover
+  transform: scale(1.05)
+
+.option__word 
+  margin-left: 33px
+
+.option__righth1 
+  font-size: 20px
+  font-weight: bold
+  color: #fbfbfb
+  letter-spacing: 0.03em
+  margin-bottom: 17px
+
+.option__righth1:hover
+  color: $color-site
+
+.option__text 
+  font-size: 14px
+  font-weight: 300
+  color: #fbfbfb
+  letter-spacing: 0.03em
+  line-height: 24px
+  width: 222px
+
+.subscribe 
+  height: 438px
+  position: relative
+  display: flex
+  justify-content: center
+
+.subscribe_backgroung 
+  opacity: 0.45
+  background-image: url(img/subscribe.png)
+  background-repeat: no-repeat
+  height: 436px
+  width: 1600px
+
+.subscribe__content 
+  justify-content: space-between
+  opacity: 1
+  display: flex
+  position: absolute
+  top: 0
+  margin-top: 111px
+
+.subscribe__left,
+.subscribe__right 
+  width: 569px
+
+.subscribe__left__top 
+  display: flex
+  padding-right: 32px
+
+.subscribe__image 
+  margin-right: 28px
+
+.subscribe__word 
+  margin-bottom: 15px
+  font-size: 16px
+  font-style: italic
+  color: #222224
+  letter-spacing: 0.03em
+  line-height: 26px
+
+.subscribe__name 
+  font-size: 16px
+  font-weight: bold
+  color: $color-site
+  letter-spacing: 0.03em
+  line-height: 26px
+
+.subscribe__sity 
+  font-size: 12px
+  font-weight: 300
+  color: #222224
+  letter-spacing: 0.03em
+  line-height: 14px
+
+.subscribe__pagination 
+  margin-left: 111px
+  margin-top: 30px
+
+.circle 
+  width: 38px
+  height: 4px
+  background-color: #d6d6d6
+  display: inline-block
+  margin-right: 13px
+
+.circle-active 
+  width: 38px
+  height: 4px
+  background-color: $color-site
+
+.circle:hover 
+  background-color: #d6d6d6
+  outline: 1px solid $color-site
+
+.subscribe 
+  height: 438px
+  background: url(img/2196.png), url(img/sub-back.png) no-repeat center
+  background-size: cover
+
+.subscribe__right 
+  text-align: center
+
+.subscribe__right__h1 
+  font-size: 24px
+  color: #222224
+  text-align: center
+  letter-spacing: 0.03em
+  line-height: 54px
+  text-transform: uppercase
+
+.subscribe__right__text 
+  font-size: 14px
+  color: #222224
+  text-align: center
+  letter-spacing: 0.03em
+  line-height: 24px
+
+.subscribe__form 
+  margin-top: 35px
+
+.input_subscribe 
+  display: flex
+  justify-content: center
+
+.subscribe_field 
+  display: block
+  height: 46px
+  width: 250px
+  background-color: #e1e1e1
+  border: none
+  border-top-left-radius: 23px
+  border-bottom-left-radius: 23px
+  padding: 0 28px 0 28px
+  outline: none
+
+.subscribe_button 
+  box-shadow: none
+  display: block
+  height: 46px
+  width: 104px
+  background-color: $color-site
+  border-radius: 0 23px 23px 0
+  border: none
+  transition: transform 0.3s
+  &:hover
+    border: 1px solid $color-site
+    background-color: #fff
+    transform: scale(1.03)
+  &:hover .button_sc
+    color: $color-site
+
+.button_sc 
+  font-size: 14px
+  color: #ffffff
+  text-align: center
+  letter-spacing: 0.03em
+  line-height: 46px
+
+
+
+.information 
+  padding-top: 109px
+  height: 349px
+  display: flex
+  justify-content: space-between
+
+.brand_discription 
+  width: 430px
+  height: 30px
+  &_logo
+    margin-bottom: 29px
+
+.information_data 
+  padding-left: 30px
+  padding-right: 30px
+  &_header
+    font-size: 18px
+    font-weight: bold
+    color: $color-site
+    text-align: left
+    letter-spacing: 0.03em
+    line-height: 26px
+
+.information_data_ul 
+  margin-top: 45px
+  height: 180px
+  display: flex
+  flex-flow: column
+  justify-content: space-between
+  width: 160px
+
+.information_data_li 
+  list-style-type: none
+
+.information_data_link 
+  font-size: 16px
+  color: #898989
+  text-align: right
+  letter-spacing: 0.03em
+
+.information_data_link:hover
+  color: $color-site
+
+.brand_discription_text
+  font-size: 14px
+  font-weight: 300
+  color: #898989
+  text-align: left
+  letter-spacing: 0.03em
+  line-height: 24px
+  margin-bottom: 16px
+
+.footer_bottom 
+  height: 79px
+  background-color: #e6e6e6
+  display: flex
+  justify-content: space-between
+  align-items: center
+
+.copywrite_text 
+  font-size: 16px
+  color: #7a7a7a
+  text-align: right
+  letter-spacing: 0.03em
+
+.follow_ul 
+  display: flex
+  flex-wrap: wrap
+
+.follow_li 
+  margin-left: 7px
+  list-style-type: none
+  display: flex
+  justify-content: center
+  align-items: center
+  text-align: center
+
+.follow_link 
+  padding: 4px 0 0 0
+  display: block
+  width: 32px
+  height: 26px
+  background-color: #fff
+  font-size: 16px
+  color: #b2b2b2
+  &:hover
+    color: #f7f7f8
+    background-color: $color-site
